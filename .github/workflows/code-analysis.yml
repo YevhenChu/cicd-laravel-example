@@ -91,7 +91,7 @@ jobs:
         working-directory: ${{env.working-directory}}
 
   lint:
-    name: rector
+    name: lint
     runs-on: ubuntu-latest
     strategy:
       matrix:
