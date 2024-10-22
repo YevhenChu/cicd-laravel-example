@@ -45,6 +45,7 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist
+        working-directory: ${{env.working-directory}}
         
       - name: Run phpstan analyzer
         run: ./vendor/bin/phpstan --error-format=github
@@ -85,6 +86,7 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist
+        working-directory: ${{env.working-directory}}
         
       - name: Run rector analyzer
         run: vendor/bin/rector process --config rector.php --dry-run
@@ -125,6 +127,7 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist
+        working-directory: ${{env.working-directory}}
         
       - name: Run lint analyzer
         run: vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff --show-progress=none -v
