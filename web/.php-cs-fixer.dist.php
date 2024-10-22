@@ -46,7 +46,7 @@ $rules = [
             'const' => 'one',
             'method' => 'one',
             'property' => 'one',
-            'trait_import' => 'none',
+            'trait_import' => 'only_if_meta',
         ],
     ],
     'concat_space' => [
